@@ -73,4 +73,17 @@ main section.products-show {
   }
 }
 
+.sold {
+  position: absolute;
+  background-color: rgb(228, 153, 152);
+  color: whitesmoke;
+  top: 0px;
+  margin-top: 0;
+  padding: 10px;
+  margin-right: 0;
+  left: 0;
+  width: 45%;
+  border-radius: 3px;
+  border-bottom-right-radius: 10px;
+}
 

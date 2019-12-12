@@ -5,6 +5,7 @@
   </header>
 
   <div class="panel panel-default items">
+  <% if enhanced_cart.product.any? %> 
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -25,11 +26,16 @@
             TOTAL:
           </th>
           <th>
-            <%= humanized_money_with_symbol cart_subtotal_cents / 100%>
+            <%= humanized_money_with_symbol cart_subtotal_cents / 100 %>
           </th>
         </tr>
       </tfoot>
     </table>
+    <% else %>
+    <div class="alert alert-danger" role="alert">
+      <h4>Please add something to your cart if you wish to check out</h4>
+    </div>
+    <% end %>
   </div>
 
   <div class="row">
