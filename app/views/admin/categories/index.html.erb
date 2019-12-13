@@ -1,5 +1,24 @@
-<h1>AYYYYYYYYY FAM</h1>
-<% @category.each do |n| %>
-  <p><%= n.name %></p>
-<% end %>
+<section class="admin-products-index">
+  <header class="page-header">
+    <h1>All Categories</h1>
+  </header>
+  <div class="well">
+    <%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
+  </div>
+  <div class="panel panel-default products">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @categories.each do |n| %>
+        <td><%= n.name %></td>
+      <% end %>
+      </tbody>
+    </table>
 
+  </div>
+
+</section>
