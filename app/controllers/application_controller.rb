@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
 
   private
 
+  http_basic_authenticate_with name: "Jungle", password: "Book"
+  
   def cart
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
   end
