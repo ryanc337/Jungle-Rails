@@ -23,8 +23,7 @@ class Admin::CategoriesController < ApplicationController
     params.require(:category).permit(
       :name,
       :created_at,
-      :updated_at,
+      :updated_at
     )
   end
-
 end
